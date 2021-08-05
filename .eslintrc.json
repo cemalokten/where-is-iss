@@ -1,0 +1,14 @@
+{
+  "extends": ["airbnb-base/legacy", "prettier", "plugin:node/recommended"],
+  "plugins": ["prettier", "HTML"],
+  "rules": {
+    "no-restricted-globals": ["error", "event", "fdescribe"],
+    "prettier/prettier": ["off", { "singleQuote": true }],
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "func-names": "off",
+    "no-process-exit": "off",
+    "object-shorthand": "off",
+    "class-methods-use-this": "off"
+  }
+}
