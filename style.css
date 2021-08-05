@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'JetBrainsMono Bold Italic';
+  src: url('./fonts/JetBrainsMono-Bold-Italic.woff2') format('woff2'),
+    url('./fonts/JetBrainsMono-Bold-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JetBrainsMono Medium Italic';
+  src: url('./fonts/JetBrainsMono-Medium-Italic.woff2') format('woff2'),
+    url('./fonts/JetBrainsMono-Medium-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JetBrainsMono Regular';
+  src: url('./fonts/JetBrainsMono-Regular.woff2') format('woff2'),
+    url('./fonts/JetBrainsMono-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-transform: uppercase;
+}
+
+:root {
+  --land: green;
+  --sea: blue;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+body {
+  background-color: var(--sea);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: 'JetBrainsMono Regular';
+  font-size: 4vw;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 6vw;
+  background-color: white;
+  position: absolute;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 6vw;
+  background-color: white;
+
+  bottom: 0;
+  position: absolute;
+}
+
+.main--emoji {
+  font-size: 30vw;
+}
+
+.footer--text {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  height: 5vw;
+  overflow-x: hidden;
+}
+
+.track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 8vw;
+  }
+
+  .footer--text {
+    height: 10vw;
+  }
+
+  header {
+    height: 12vw;
+  }
+
+  footer {
+    height: 12vw;
+  }
+}
