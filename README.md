@@ -25,10 +25,10 @@ Font by [JetBrainsMono] (https://www.jetbrains.com/lp/mono/)
 
 ### 👀 Screenshots
 
-![Where is ISS?](images/where-is-iss-1.png)
+![Where is ISS?](images/where-is-iss-11.png)
 
-![Where is ISS?](images/where-is-iss-2.png)
+![Where is ISS?](images/where-is-iss-21.png)
 
-![Where is ISS?](images/where-is-iss-3.png)
+![Where is ISS?](images/where-is-iss-31.png)
 
-![Where is ISS?](images/where-is-iss-4.png)
+![Where is ISS?](images/where-is-iss-41.png)
