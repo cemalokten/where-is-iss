@@ -1,23 +1,20 @@
 @font-face {
   font-family: 'JetBrainsMono Bold Italic';
-  src: url('./fonts/JetBrainsMono-Bold-Italic.woff2') format('woff2'),
-    url('./fonts/JetBrainsMono-Bold-Italic.woff') format('woff');
+  src: url('./fonts/JetBrainsMono-Bold-Italic.woff2') format('woff2'), url('./fonts/JetBrainsMono-Bold-Italic.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'JetBrainsMono Medium Italic';
-  src: url('./fonts/JetBrainsMono-Medium-Italic.woff2') format('woff2'),
-    url('./fonts/JetBrainsMono-Medium-Italic.woff') format('woff');
+  src: url('./fonts/JetBrainsMono-Medium-Italic.woff2') format('woff2'), url('./fonts/JetBrainsMono-Medium-Italic.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'JetBrainsMono Regular';
-  src: url('./fonts/JetBrainsMono-Regular.woff2') format('woff2'),
-    url('./fonts/JetBrainsMono-Regular.woff') format('woff');
+  src: url('./fonts/JetBrainsMono-Regular.woff2') format('woff2'), url('./fonts/JetBrainsMono-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -29,7 +26,7 @@ html {
 }
 
 :root {
-  --land: green;
+  --land: rgb(0, 255, 0);
   --sea: blue;
 }
 
@@ -92,7 +89,7 @@ footer {
   position: absolute;
   white-space: nowrap;
   will-change: transform;
-  animation: marquee 10s linear infinite;
+  animation: marquee 160s linear infinite;
 }
 
 @keyframes marquee {
