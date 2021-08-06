@@ -55,12 +55,14 @@ function buildMarquee(vel, landOrSea) {
   return `THE ISS IS ORBITING OVER <span class='detail'>${landOrSeaBol}</span> TRAVELLING AT <span class='detail'>${velocity} km/h</span> → `;
 }
 
-/* API Fetch from 'Where the ISS' and 'OnWater.io'
-   First fetches details from ISS (Longitude, latitude, and velocity)
-   That data is then used to create a request to OnWater.io
-   OnWater returns true if the coordinates are over sea, and false if over the sea
-   That data is used to update elements on the page, background colour, and text in the marquee
-*/
+/* 
+  📌 ATTEMPT 1 - BEFORE LEARNING ABOUT ASYNC / AWAIT
+  API Fetch from 'Where the ISS' and 'OnWater.io'
+  First fetches details from ISS (Longitude, latitude, and velocity)
+  That data is then used to create a request to OnWater.io
+  OnWater returns true if the coordinates are over sea, and false if over the sea
+  That data is used to update elements on the page, background colour, and text in the marquee
+
 
 fetch('https://api.wheretheiss.at/v1/satellites/25544')
   .then((response) => response.json())
@@ -78,3 +80,34 @@ fetch('https://api.wheretheiss.at/v1/satellites/25544')
     detailColour = Array.from(document.getElementsByClassName('detail'));
     setTextColour(landOrSeaBol);
   });
+
+  */
+
+/* 
+  📌 ATTEMPT 2 - USING ASYNC AWAIT
+  Much easier for me to understand!
+  */
+
+const apiISS = 'https://api.wheretheiss.at/v1/satellites/25544';
+
+async function getApi() {
+  const responseISS = await fetch(apiISS);
+
+  const dataISS = await responseISS.json();
+
+  assignLongitude(dataISS.longitude, dataISS.latitude, dataISS.velocity);
+
+  const reponseOnwater = await fetch(`https://api.onwater.io/api/v1/results/${latitude},${longitude}?access_token=-yxsyX6EsS4ysebkXji6`);
+
+  const dataLandOrSea = reponseOnwater.json();
+
+  changeColourAndLocation(dataLandOrSea.water);
+
+  marqueeText.forEach((text) => (text.innerHTML = buildMarquee(velocity, landOrSeaBol).repeat(45)));
+
+  detailColour = Array.from(document.getElementsByClassName('detail'));
+
+  setTextColour(landOrSeaBol);
+}
+
+getApi();
