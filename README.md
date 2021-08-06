@@ -6,7 +6,7 @@ The background and text colour changes depending on its location, blue for sea, 
 
 This is the result of a personal challenge to under more about Fetch.
 
-Font by [JetBrainsMono] (https://www.jetbrains.com/lp/mono/)
+Font by [JetBrainsMono](https://www.jetbrains.com/lp/mono/)
 
 ### 📚 What I learnt
 - That `fetch`ed data needs to be maniupulated in the `.then()` methods, because otherwise it's unavailable.. 
