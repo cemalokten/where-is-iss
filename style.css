@@ -38,7 +38,7 @@ html {
 }
 
 body {
-  background-color: var(--sea);
+  background-color: grey;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
