@@ -52,7 +52,7 @@ function setTextColour(val) {
 // Build template literal string to replace LOADING text
 
 function buildMarquee(vel, landOrSea) {
-  return `THE ISS IS OVER <span class='detail'>${landOrSeaBol}</span> TRAVELLING AT <span class='detail'>${velocity} km/h</span> → `;
+  return `THE ISS IS ORBITING OVER <span class='detail'>${landOrSeaBol}</span> TRAVELLING AT <span class='detail'>${velocity} km/h</span> → `;
 }
 
 /* API Fetch from 'Where the ISS' and 'OnWater.io'
