@@ -28,7 +28,7 @@ function assignLongitude(long, lat, vel) {
 // Set colour of background detail depending on data and assign text to landOrSeaBol
 
 function changeColourAndLocation(value) {
-  if (value) {
+  if (!value) {
     landOrSeaBol = 'SEA';
     body[0].style.backgroundColor = 'var(--sea)';
   } else {
@@ -41,7 +41,7 @@ function changeColourAndLocation(value) {
 
 function setTextColour(val) {
   detailColour.forEach((c) => {
-    if (val == 'SEA') {
+    if (val === 'SEA') {
       c.style.color = 'var(--sea)';
     } else {
       c.style.color = 'var(--land)';
@@ -51,7 +51,7 @@ function setTextColour(val) {
 
 // Build template literal string to replace LOADING text
 
-function buildMarquee(vel, landOrSea) {
+function buildMarquee() {
   return `THE ISS IS ORBITING OVER <span class='detail'>${landOrSeaBol}</span> TRAVELLING AT <span class='detail'>${velocity} km/h</span> → `;
 }
 
@@ -103,7 +103,7 @@ async function getApi() {
 
   changeColourAndLocation(dataLandOrSea.water);
 
-  marqueeText.forEach((text) => (text.innerHTML = buildMarquee(velocity, landOrSeaBol).repeat(45)));
+  setTimeout(() => marqueeText.forEach((text) => (text.innerHTML = buildMarquee(velocity, landOrSeaBol).repeat(45))), 0);
 
   detailColour = Array.from(document.getElementsByClassName('detail'));
 
