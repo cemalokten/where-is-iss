@@ -28,7 +28,7 @@ function assignLongitude(long, lat, vel) {
 // Set colour of background detail depending on data and assign text to landOrSeaBol
 
 function changeColourAndLocation(value) {
-  if (!value) {
+  if (value) {
     landOrSeaBol = 'SEA';
     body[0].style.backgroundColor = 'var(--sea)';
   } else {
