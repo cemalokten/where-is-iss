@@ -103,11 +103,11 @@ async function getApi() {
 
   changeColourAndLocation(dataLandOrSea.water);
 
-  setTimeout(() => marqueeText.forEach((text) => (text.innerHTML = buildMarquee(velocity, landOrSeaBol).repeat(45))), 0);
-
-  detailColour = Array.from(document.getElementsByClassName('detail'));
-
-  setTextColour(landOrSeaBol);
+  setTimeout(() => {
+    marqueeText.forEach((text) => (text.innerHTML = buildMarquee(velocity, landOrSeaBol).repeat(45)));
+    detailColour = Array.from(document.getElementsByClassName('detail'));
+    setTextColour(landOrSeaBol);
+  }, 0);
 }
 
 getApi();
