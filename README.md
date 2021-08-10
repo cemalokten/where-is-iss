@@ -4,7 +4,7 @@ A site that lets you know if the International Space Station is flying over land
 
 The background and text colour changes depending on its location, blue for sea, green for sea.
 
-This is the result of a personal challenge to under more about Fetch.
+This is the result of a personal challenge to understand more about Fetch and async functions.
 
 Font by [JetBrainsMono](https://www.jetbrains.com/lp/mono/)
 
